@@ -1,0 +1,38 @@
+/* mobile first design*/
+
+body {
+    display:grid;
+    grid-auto-rows: 100px auto 1fr 75px;
+    height: 100vh;
+    margin: 0;
+}
+/* Nav */
+nav {
+ display: flex;
+
+}
+/* Hero */
+#hero img {
+    width: 100%;
+}
+/* Main */
+#main {
+    width: 100%;
+    text-align: center;
+}
+/* Footer */
+
+
+
+
+/* media q to hide images based on user platform */
+@media only screen and (max-width : 1023px) {
+    .hero-desk {
+        display: none;
+    }
+}
+@media only screen and (min-width : 1024px) {
+    .hero-mobile {
+        display: none;
+    }
+}
