@@ -1,38 +1,95 @@
 /* mobile first design*/
 
 body {
-    display:grid;
-    grid-auto-rows: 100px auto 1fr 75px;
-    height: 100vh;
-    margin: 0;
+  display: grid;
+  grid-auto-rows: 100px auto 1fr 25px;
+  height: 100vh;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Josefin Sans", Geneva, Verdana, sans-serif;
 }
 /* Nav */
 nav {
- display: flex;
-
+  display: flex;
+}
+nav img {
+  align-self: center;
+  padding-left: 2rem;
 }
 /* Hero */
 #hero img {
-    width: 100%;
+  width: 100%;
 }
 /* Main */
 #main {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+#main h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 1rem;
+  font-weight: 600;
+}
+#main h1:first-child {
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+}
+#main p {
+  margin: 2rem 2rem;
+  line-height: 1.5rem;
+  color: hsl(0, 36%, 70%);
+}
+#main form {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+#main form input {
+  color: hsl(0, 36%, 70%);
+  padding: 1rem 0;
+  padding-left: 1.5rem;
+  border: 1px solid hsl(0, 36%, 70%);
+  border-radius: 2rem;
+  width: 75%;
+  font-size: 1rem;
+}
+#user-input button {
+  background-image: linear-gradient(
+    to right,
+    hsl(0, 80%, 86%) 0%,
+    hsl(0, 74%, 74%) 100%
+  );
+  border-radius: 2rem;
+  width: 5rem;
+  margin-left: -4.7rem;
+  border: 0;
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: hsl(0, 36%, 70%);
+  opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: hsl(0, 36%, 70%);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: hsl(0, 36%, 70%);
 }
 /* Footer */
-
-
-
-
 /* media q to hide images based on user platform */
-@media only screen and (max-width : 1023px) {
-    .hero-desk {
-        display: none;
-    }
+@media only screen and (max-width: 1023px) {
+  .hero-desk {
+    display: none;
+  }
 }
-@media only screen and (min-width : 1024px) {
-    .hero-mobile {
-        display: none;
-    }
+@media only screen and (min-width: 1024px) {
+  .hero-mobile {
+    display: none;
+  }
 }
