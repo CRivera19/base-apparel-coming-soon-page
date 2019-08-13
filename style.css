@@ -82,13 +82,59 @@ nav img {
   color: hsl(0, 36%, 70%);
 }
 /* Footer */
+
+
 /* media q to hide images based on user platform */
+
 @media only screen and (max-width: 1023px) {
+  /* Hide desktop img on mobile */
   .hero-desk {
     display: none;
   }
 }
+
 @media only screen and (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: #f4f2f7;
+background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ee9087' fill-opacity='0.16' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+  nav {
+    grid-area: 1 / 2 / 3 / 4;
+  }
+  nav img {
+    padding: 0 3rem;
+  }
+  #hero {
+    grid-area: 1 / 4 / 7 / 7;
+    justify-self: right;
+    
+  }
+  #hero .hero-desk {
+    width: auto;
+    height: 100vh;
+  }
+  main {
+    grid-area: 2 / 2 / 6 / 4;
+    align-self: center;
+  }
+  main h1 {
+    text-align: justify;
+    padding:0 3rem;
+  }
+  #main p {
+    margin: 2rem;
+  }
+  footer {
+    grid-area: 6 / 2 / 7 / 4;
+    align-self: end;
+  }
+  
+  /* Hide mobile img on desktop */
   .hero-mobile {
     display: none;
   }
